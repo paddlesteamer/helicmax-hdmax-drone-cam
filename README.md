@@ -3,8 +3,8 @@ This repo contains http streamer service and reverse engineering files for helic
 
 ## Folder Structure
 ### gostream
-Streamer for drone cam. After you connected to the drone cam with wifi, run:
-`go run stream.go` and then go to [http://127.0.0.1:8080/stream](http://127.0.0.0.1:8080/stream). This is the folder that you're interested in if you just want to stream video from the drone camera.
+Streamer for drone cam. After you connected to the drone cam with wifi, run
+`go run stream.go` and then go to [http://127.0.0.1:8080/stream](http://127.0.0.1:8080/stream). This is the folder that you're interested in if you just want to stream video from the drone camera.
 
 ### apk
 
