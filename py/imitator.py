@@ -17,13 +17,11 @@ async def recvfrom(sock):
     try:
         data, addr = sock.recvfrom(1024)
     except socket.timeout:
-        # print("timeout")
         return
 
     caddr = addr
 
     if data:
-        # print(f"Data from app {data}")
         queue1.append(data)
 
 async def recv(sock):
@@ -32,11 +30,9 @@ async def recv(sock):
     try:
         data = sock.recv(1024)
     except socket.timeout:
-        # print("timeout2")
         return
 
     if data:
-        # print(f"Data from cam {data}")
         queue2.append(data)
 
 async def sendto(sock, data, addr):
@@ -86,10 +82,7 @@ async def main():
 
     await asyncio.gather(async_listen_app(asock), async_send_to_cam(csock), async_listen_cam(csock), async_send_to_app(asock))
 
-    print("here")
-
 if __name__ == "__main__":
     port = int(sys.argv[1])
-
 
     asyncio.run(main())
