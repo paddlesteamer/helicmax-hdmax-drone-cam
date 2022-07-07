@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_lw93main_top_visibility" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/on_icon_hd" android:scaleType="fitCenter" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/linear_top_left_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_weight="1.0" android:layout_toLeftOf="@id/iv_lw93main_top_visibility">
+        <ImageView android:id="@id/iv_lw93main_top_back" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/backing_hd1" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_lw93main_top_playback" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/review_hd" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        <com.lewei.multiple.view.BrightImageView android:id="@id/iv_lw93main_top_sdcard_capture_hd" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/main_sdcard_capture_hd" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_lw93main_top_gravity" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/gravitydis" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_lw93main_top_speed_level" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/san_hd" android:scaleType="fitCenter" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/linear_right_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_weight="1.0" android:layout_toRightOf="@id/iv_lw93main_top_visibility">
+        <com.lewei.multiple.view.BrightImageView android:id="@id/iv_lw93main_top_sdcard_capture" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/main_sdcard_capture_hd" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_lw93main_top_playback_hd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/review_hd" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_lw93main_top_local_record" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/videodis_hd" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_lw93main_top_sdcard_record" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/main_sdcard_record_normal" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_lw93main_top_limitedhigh" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/brackets" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_lw93main_top_reverse" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/turnscreen" android:scaleType="fitCenter" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

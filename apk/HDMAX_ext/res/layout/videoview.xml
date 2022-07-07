@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Please input url" android:ems="12" />
+        <Button android:id="@id/start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Play" android:onClick="startPlay" />
+    </LinearLayout>
+    <io.vov.vitamio.widget.VideoView android:id="@id/surface_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Button android:id="@id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="openvideo1" android:onClick="openVideo" />
+</LinearLayout>

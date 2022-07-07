@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:background="#ff111111" android:layout_width="fill_parent" android:layout_height="36.0dip">
+        <ImageView android:id="@id/iv_sdcardvideo_actionbar_back" android:background="@drawable/actionbar_back_bg_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/actionbar_back1" />
+        <ImageView android:id="@id/seprater" android:layout_width="1.0dip" android:layout_height="20.0dip" android:src="@color/black" android:layout_toRightOf="@id/iv_sdcardvideo_actionbar_back" android:layout_centerVertical="true" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/whitesmoke" android:id="@id/txt_sdcardvideo_Actionbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sdcardvideo_title" android:layout_toRightOf="@id/seprater" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/iv_sdcardvideo_actionbar_more" android:background="@drawable/actionbar_back_bg_state" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/actionbar_more" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <GridView android:gravity="center" android:id="@id/gd_sdcardvideo_Videos" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:horizontalSpacing="10.0dip" android:verticalSpacing="10.0dip" android:stretchMode="columnWidth" android:columnWidth="100.0dip" android:numColumns="auto_fit" />
+</LinearLayout>
