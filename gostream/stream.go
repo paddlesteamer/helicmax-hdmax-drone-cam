@@ -3,7 +3,9 @@ package main
 import (
 	"bytes"
 	"context"
+	"encoding/binary"
 	"fmt"
+	"image/jpeg"
 	"math/rand"
 	"net"
 	"net/http"
@@ -51,9 +53,12 @@ func getFrame(c net.Conn) ([]byte, error) {
 
 		if !bytes.Equal(buffer[0:3], []byte{0x63, 0x63, 0x03}) {
 			fmt.Printf("Not a frame: %v\n", buffer[0:3])
+			continue
 		}
 
-		frame.Write(buffer[54:n])
+		chunk_length := binary.LittleEndian.Uint16(buffer[52:54])
+
+		frame.Write(buffer[54 : chunk_length+54])
 
 		chunk_no := int(buffer[48])
 		total_chunks := int(buffer[50])
@@ -108,8 +113,14 @@ func handleStream(w http.ResponseWriter, r *http.Request) {
 			// send frame bytes
 			f, err := getFrame(c)
 			if err != nil {
-				fmt.Printf("Error getting frame: %v", err)
+				fmt.Printf("Error getting frame: %v\n", err)
 				return
+			}
+
+			_, err = jpeg.Decode(bytes.NewReader(f))
+			if err != nil {
+				fmt.Printf("Error decoding frame: %v\n", err)
+				continue
 			}
 
 			w.Write([]byte("--" + boundary + "\r\n"))
